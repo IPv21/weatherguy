@@ -6,6 +6,8 @@
 }
 
 body {
+display: flex;
+flex-wrap: wrap;
 font-family: Arial, sans-serif;
 background-color: azure;
 margin: 0;
@@ -28,6 +30,9 @@ h1 {
   padding-top: 33px;
 
 }
+
+
+
 
 
 
@@ -55,6 +60,7 @@ width: 20%;
 } */
 
 main {
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -64,6 +70,7 @@ main {
   margin: 5px;
   background-color: lightgray;
   padding: 10px;
+  height: 200px;
 }
 
 .weather-icon {
