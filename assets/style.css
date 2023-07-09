@@ -1,68 +1,120 @@
-    *{
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        box-sizing: border-box;
-    }
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: azure;
-      margin: 0;
-      padding: 20px;
-    }
-    
-    h1 {
-      text-align: center;
-    }
+body {
+display: flex;
+flex-wrap: wrap;
+font-family: Arial, sans-serif;
+background-color: azure;
+margin: 0;
+padding: 20px;
+}
 
-    .today {
-        
+h1 {
+/* text-align: center; */
+}
 
-    }
+.today {
+  
 
-    h1 {
-        font-size: 55px;
-        font-weight: 800;
-        color: darkblue;
-        padding-top: 33px;
-     
-    }
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 800;
+  color: darkblue;
+  padding-top: 33px;
+
+}
 
 
-    
-    .input-area {
-     height: 40px;   
-     width: 90%;
-     max-width: 470px;
-     background: linear-gradient(140deg, rgb(187, 113, 1), white);
-     color: black;
-     margin: 100px auto 0;
-     border-radius: 20px;
-     padding: 40 px 30px;
-      text-align: center;
-    }
-    
-    .forecast {  
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    
-    /* .day-forecast {
-      text-align: center;
-      width: 20%;
-    } */
 
-    main {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      
-     .day-forecast {
-        width: calc(50% - 20px);
-        margin: 5px;
-        background-color: lightgray;
-        padding: 10px;
-      }
-      
+
+
+
+.input-area {
+height: 40px;   
+width: 90%;
+max-width: 470px;
+background: linear-gradient(140deg, rgb(187, 113, 1), white);
+color: black;
+margin: 100px auto 0;
+border-radius: 20px;
+padding: 40 px 30px;
+text-align: center;
+}
+
+.forecast {  
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+/* .day-forecast {
+text-align: center;
+width: 20%;
+} */
+
+main {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day-forecast {
+  width: calc(50% - 20px);
+  margin: 5px;
+  background-color: lightgray;
+  padding: 10px;
+  height: 200px;
+}
+
+.weather-icon {
+  width: 70px;
+  margin-top: 10px;
+
+
+}
+
+.weather h1 {
+  font-size: 40px;
+  font-weight: 500;
+
+}
+
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 30px;
+
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+}
+
+.col img {
+  width: 40px;
+  margin-right: 10px;
+
+}
+
+.humidity, .wind {
+  font-size: 20px;
+  margin-top: 10px;
+}
