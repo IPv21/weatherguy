@@ -10,14 +10,19 @@ async function checkWeather(city) {
     var data = await response.json();
     console.log(data);
     document.querySelector(".city").innerHTML = data.name;
-    document.querySelector('.temp').innerHTML = data.main.temp;
     document.querySelector('.humidity').innerHTML = data.main.humidity;
     document.querySelector('.wind').innerHTML = Math.round(data.wind.speed) + 'MPH';
-}
+    var kel = data.main.temp;
+    console.log(kel);
+    var far = Math.round(1.8 * (kel - 273) + 32);
+    console.log(far);
+    document.querySelector('.temp').innerHTML = far;
+}    
 
 searchBtn.addEventListener('click', ()=>{
     checkWeather(searchBox.value);
 })
 checkWeather(city);
+
 
 
