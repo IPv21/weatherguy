@@ -30,6 +30,10 @@ searchBtn.addEventListener('click', ()=>{
 checkWeather(city);
 
 async function day(city) {
+    var weatherIcon = document.createElement('img');
+    const url = `https://openweathermap.org/img/wn/${data.list[8].weather[0].icon}@2x.png`;
+    weatherIcon.setAttribute('src', url);
+    document.querySelector('.img1').append(weatherIcon);
     const response = await fetch(castUrl + city + `&appID=${apiKey}`);
     var data = await response.json();
     console.log(data);
@@ -49,8 +53,8 @@ async function day(city) {
     // var conditions =  'https://openweathermap.org/img/wn/' + (data.list[8].weather[0].icon);
     // document.querySelector('#d1c').innerHTML = conditions;
 
-    var weatherIcon = document.day-forecast.createElement('img');
-    weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '@2x.png');
+    // var weatherIcon = document.day-forecast.createElement('img');
+    // weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '@2x.png');
 
 
     
@@ -61,10 +65,3 @@ async function day(city) {
 }
 
 day(city);
-
-
-
-
-
-
-
