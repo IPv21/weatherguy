@@ -40,8 +40,23 @@ async function day(city) {
     var far = Math.round(1.8 * (kel - 273) + 32);
     console.log(far);
     document.querySelector('#d1t').innerHTML = far + '°F';
-    document.querySelector('#d1c').innerHTML = (data.list[8].weather[0].main);
-    console.log(data.list[8].weather[0].main);
+    // document.querySelector('#d1c').innerHTML = (data.list[8].weather[0].main);
+    console.log(data.list[6].weather[0].main);
+    var day1cond = (data.list[8].weather.description);
+    document.querySelector('.day1c').innerHTML = day1cond;
+
+    // console.log( 'https://openweathermap.org/img/wn/' + (data.list[8].weather[0].icon));
+    // var conditions =  'https://openweathermap.org/img/wn/' + (data.list[8].weather[0].icon);
+    // document.querySelector('#d1c').innerHTML = conditions;
+
+    var weatherIcon = document.day-forecast.createElement('img');
+    weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '@2x.png');
+
+
+    
+
+
+
 
 }
 
