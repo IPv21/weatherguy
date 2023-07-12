@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <meta charset="UTF-8">
   <title>WeatherGuy</title>
@@ -8,70 +8,76 @@
   integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/style.css">
 
-   <h1>Weather Guy</h1>
-     
-      <div class="search">
-        <input class="text" type="text" placeholder="Enter City">
-        <button>Search</button>
-      </div>
-     
-    </head> 
 <body>
 
-  <div class="weather">
+  <h1>WeatherGuy
+  </h1>
+     
+  <div class="search">
+        <input class="text" type="text" placeholder="Enter City">
+        <button>Search</button>
+  </div>
+     
+  </head> 
+
+   <div class="today">
     <img src="./assets/images/rain.png" class="weather-icon">
-      <h1 class="temp">50°F</h1>
-      <h2 class="city">Philadelphia</h2>
-      <div class="details">
-       <div class="col">
-          <div>
-           <img src="./assets/images/humidity.jpeg" class="weather-icon">
-           <p class="humidity">50</p>
+    <h1 class="temp">°F</h1>
+    <h2 class="city">Philadelphia</h2>
+    <div class="details">
+      <div class="col">
+        <div>
+          <img src="./assets/images/humidity.jpeg" class="weather-icon">
+          <p class="humidity">50</p>
           </div>
           <div class="col">
-           <img src="./assets/images/wind.png" class="weather-icon">
-           <div>
-             <p class="wind">50mph</p>
-           </div>
-       </div>
-  </div>
+          <img src="./assets/images/wind.png" class="weather-icon">
+          <p class="wind">5 MPH</p>
+          </div>
+
+      </div>
+
+    </div>
+   </div> 
 
 
    
   
        
 
-   <main>
-    <div class="day-forecast">
+      <main>
+        <div class="day-forecast">
         <h2>5 DAY FORECAST</h2>
+        <p></p>
         <p><!-- Day 1 forecast content --></p>
-      </div>
+        </div>
 
-    <div class="day-forecast">
-      <h2>Day 1</h2>
-      <p><!-- Day 1 forecast content --></p>
-    </div>
+        <div class="day-forecast">
+        <h2 id="day1"></h2>
+        <h3 id="d1t"></h3>
+        <p></p>
+        </div>
     
-    <div class="day-forecast">
-      <h2>Day 2</h2>
-      <p><!-- Day 2 forecast content --></p>
-    </div>
+        <div class="day-forecast">
+        <h2 id="day2">Day 2</h2>
+        <p><!-- Day 2 forecast content --></p>
+        </div>
     
-    <div class="day-forecast">
-      <h2>Day 3</h2>
-      <p><!-- Day 3 forecast content --></p>
-    </div>
+        <div class="day-forecast">
+        <h2 id="day3">Day 3</h2>
+        <p><!-- Day 3 forecast content --></p>
+        </div>
     
-    <div class="day-forecast">
-      <h2>Day 4</h2>
-      <p><!-- Day 4 forecast content --></p>
-    </div>
+        <div class="day-forecast">
+        <h2 id="day4">Day 4</h2>
+        <p><!-- Day 4 forecast content --></p>
+        </div>
       
-    <div class="day-forecast">
-        <h2>Day 5</h2>
+        <div class="day-forecast">
+        <h2 id="day5">Day 5</h2>
         <p><!-- Day 5 forecast content --></p>
-      </div>
-  </main>  
+        </div>
+      </main>  
   
   <script src="./assets/script.js"></script>
  

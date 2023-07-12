@@ -1,7 +1,10 @@
 const apiKey =  '428a95b212df9fb861cccf71f50f8d11';
 const apiUrl =  'https://api.openweathermap.org/data/2.5/weather?&q=';
 const searchBox = document.querySelector('.search input');
-const searchBtn = document.querySelector('.search button')
+const searchBtn = document.querySelector('.search button');
+const castUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='
+
+
 
 
 
@@ -20,9 +23,33 @@ async function checkWeather(city) {
 }    
 
 searchBtn.addEventListener('click', ()=>{
+    // 'city' is coming from searchBox.value
     checkWeather(searchBox.value);
+     day(searchBox.value);
 })
 checkWeather(city);
+
+async function day(city) {
+    const response = await fetch(castUrl + city + `&appID=${apiKey}`);
+    var data = await response.json();
+    console.log(data);
+    console.log(data.list[9].main.temp)
+    document.querySelector('#day1').innerHTML = data.list[8].dt_txt;
+    var kel = data.list[8].main.temp;
+    console.log(kel);
+    var far = Math.round(1.8 * (kel - 273) + 32);
+    console.log(far);
+    document.querySelector('#d1t').innerHTML = far + '°F';
+    document.querySelector('#d1c').innerHTML = (data.list[8].weather[0].main);
+    console.log(data.list[8].weather[0].main);
+
+}
+
+day(city);
+
+
+
+
 
 
 
