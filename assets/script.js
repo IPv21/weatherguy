@@ -75,25 +75,8 @@ async function day(city) {
     var kel5 = data.list[37].main.temp;
     var far5 = Math.round(1.8 * (kel5 - 273) + 32);
     document.querySelector('#d5t').innerHTML = far3 + '°F';
-    document.querySelector('.hum5').innerHTML = `Humidity${data.list[29].main.humidity}%`;
-    document.querySelector('.wind5').innerHTML = `Wind${data.list[29].wind.speed}MPH`;
-
-
-
-
-
-
-
-
-
-
-
-    // console.log( 'https://openweathermap.org/img/wn/' + (data.list[8].weather[0].icon));
-    // var conditions =  'https://openweathermap.org/img/wn/' + (data.list[8].weather[0].icon);
-    // document.querySelector('#d1c').innerHTML = conditions;
-
-    // var weatherIcon = document.day-forecast.createElement('img');
-    // weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '@2x.png');
+    document.querySelector('.hum5').innerHTML = `Humidity${data.list[37].main.humidity}%`;
+    document.querySelector('.wind5').innerHTML = `Wind${data.list[37].wind.speed}MPH`;
 
 
     
