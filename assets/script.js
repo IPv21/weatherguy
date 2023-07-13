@@ -2,7 +2,9 @@ const apiKey =  '428a95b212df9fb861cccf71f50f8d11';
 const apiUrl =  'https://api.openweathermap.org/data/2.5/weather?&q=';
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
-const castUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='
+const castUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+
+
 
 
 
@@ -20,17 +22,21 @@ async function checkWeather(city) {
     var far = Math.round(1.8 * (kel - 273) + 32);
     console.log(far);
     document.querySelector('.temp').innerHTML = far;
+
+
 }    
 
 searchBtn.addEventListener('click', ()=>{
     // 'city' is coming from searchBox.value
     checkWeather(searchBox.value);
      day(searchBox.value);
+     searchHistory();
+     localS();
 })
 checkWeather(city);
 
 async function day(city) {
-   
+    console.log(searchBox.value);
     const response = await fetch(castUrl + city + `&appID=${apiKey}`);
     var data = await response.json();
     console.log(data);
@@ -110,4 +116,44 @@ async function day(city) {
 
 
 
+
+
 day(city);
+
+// searchBtn.addEventListener('click', function(){
+//     var thisCity = document.querySelector('.text');
+//     var history = document.searchHistory.createElement('h5');
+//     history.textContent = thisCity;
+
+
+// })
+
+function searchHistory () {
+    var searchH = document.querySelector('.searchH');
+    var history = document.createElement("h4");
+    history.textContent = searchBox.value;
+    searchH.append(history);
+}
+
+function localS () {
+    var locale = searchBox.value;
+    if (locale) {
+    localStorage.setItem('history', locale);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
