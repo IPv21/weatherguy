@@ -89,26 +89,31 @@ async function day(city) {
     var weatherIcon = document.createElement('img');
     const url = `https://openweathermap.org/img/wn/${data.list[8].weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', url);
+    document.querySelector('.img1').innerHTML = '';
     document.querySelector('.img1').append(weatherIcon);
 
     var weatherIcon = document.createElement('img');
     const url2 = `https://openweathermap.org/img/wn/${data.list[14].weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', url2);
+    document.querySelector('.img2').innerHTML = '';
     document.querySelector('.img2').append(weatherIcon);
 
     var weatherIcon = document.createElement('img');
     const url3 = `https://openweathermap.org/img/wn/${data.list[21].weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', url3);
+    document.querySelector('.img3').innerHTML = '';
     document.querySelector('.img3').append(weatherIcon);
 
     var weatherIcon = document.createElement('img');
     const url4 = `https://openweathermap.org/img/wn/${data.list[28].weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', url4);
+    document.querySelector('.img4').innerHTML = '';
     document.querySelector('.img4').append(weatherIcon);
 
     var weatherIcon = document.createElement('img');
     const url5 = `https://openweathermap.org/img/wn/${data.list[37].weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('src', url5);
+    document.querySelector('.img5').innerHTML = '';
     document.querySelector('.img5').append(weatherIcon);
 
 }
